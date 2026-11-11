@@ -223,7 +223,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Configure environment variables using `.env.example`.
+Configure environment variables by copying `backend/.env.example` to `backend/.env`. Set `MONGODB_URI` to your MongoDB server (and credentials, if required) in that ignored local file; never commit real credentials. `MONGODB_DATABASE` selects the database. The API attempts a MongoDB ping on startup and remains available for liveness and metadata if MongoDB is unavailable, but database-backed features will not work until it is reachable. See [backend setup](./backend/README.md) for details.
 
 Run the backend:
 
